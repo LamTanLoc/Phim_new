@@ -1,0 +1,317 @@
+.chiTiet {
+  // background-image: url("./../../../../../assets/images/backapp.jpg");
+  // background-size: cover;
+  // background-repeat: repeat;
+  height: 1000px;
+  // width: 100%;
+  // margin-top: 66px;
+  padding: 0;
+  // position: relative;
+
+  .chiTiet__content {
+    width: 100%;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+
+    padding: 0;
+
+    .img {
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 260px;
+      height: 410px;
+
+      box-shadow: -13px -10px 38px 1px rgba(204, 238, 253, 0.5);
+      position: relative;
+      // rgba(223, 66, 66, 0.5);  rgba(197, 191, 191, 0.5);rgba(204, 238, 253, 0.5);
+    }
+
+    .btn_muaVe {
+      background: linear-gradient(to top, #6d1321, #af0522);
+      border: 1px solid rgb(192, 191, 191);
+      padding: 7px 40px;
+      margin: 0 auto;
+      align-items: center;
+      text-align: center;
+      font-size: 16px;
+      transition: 0.2s;
+      color: rgb(231, 228, 228);
+
+      &:hover {
+        background: linear-gradient(to right, #2c2b24, #e72545);
+        padding: 8px 40px;
+        border: 1px solid white;
+        color:white;
+      }
+    }
+
+    .name {
+      color: rgba(253, 173, 23, 0.9);
+      font-size: 32px;
+      font-weight: 500;
+    }
+    .content {
+      color: rgb(184, 182, 182);
+      font-size: 15px;
+    }
+
+    .brand {
+      color: rgb(209, 139, 9);
+      font-size: 16px;
+      padding-right: 45px;
+      font-weight: 500;
+      word-spacing: 1px;
+    }
+
+    ///
+    .showing__content {
+      position: absolute;
+      text-align: center;
+      top: 38%;
+      left: 42%;
+      // display: none;
+      transition: 1s;
+
+      .play {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 1px solid white;
+        color: rgb(247, 244, 244);
+        margin: 0 auto;
+        top: 34%;
+        left: 37%;
+        background-color: rgba(156, 155, 155, 0.2);
+
+        &:hover.play {
+          width: 75px;
+          height: 75px;
+          border-radius: 50%;
+          border: 2px solid rgb(197, 194, 194);
+          color: rgba(248, 246, 246, 0.8);
+          cursor: pointer;
+        }
+
+        i {
+          line-height: 70px;
+          font-size: 35px;
+          padding-left: 5px;
+        }
+        p {
+          margin: 16px 0;
+        }
+      }
+    }
+    .content_phim {
+      height: 400px;
+      padding: 0;
+    }
+  }
+  .circle_root {
+    width: 130px;
+    height: 130px;
+    background-color: rgb(243, 142, 9);
+    border-radius: 50%;
+    position: relative;
+    .circle_child {
+      width: 110px;
+      height: 110px;
+      background-color: rgba(172, 172, 168, 0.6);
+      border-radius: 50%;
+      position: absolute;
+      top: 8%;
+      left: 8%;
+      .danhgia {
+        font-size: 36px;
+        color: rgb(91, 94, 93);
+        color: white;
+        line-height: 110px;
+        font-weight: 400;
+      }
+    }
+  }
+  .star {
+    text-align: center;
+
+    #star {
+      font-size: 26px;
+      color: rgb(232, 82, 55);
+      position: absolute;
+      bottom: -40%;
+      left: 7%;
+      display: flex;
+      letter-spacing: 2px;
+    }
+  }
+}
+
+.content__LichChieu {
+  width: 100%;
+  height: 350px;
+  background-color: rgb(245, 243, 243);
+  box-shadow: 2px 2px 24px 8px rgba(202, 237, 252, 0.5);
+  border-radius: 10px;
+  padding: 0;
+  margin: 0;
+  // .hr_doitac{
+  //   width:2px;
+  //   height: 100%;
+  //   background-color: red;
+  // }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style-type: none;
+      width: 100%;
+      height: 80px;
+      border-bottom: 2px solid rgb(248, 247, 247);
+      border-right: 2px solid rgb(248, 247, 247);
+      transition: 0.5s;
+
+      &:hover {
+        background-color: rgb(230, 230, 230);
+        border-bottom: 2px solid rgb(228, 226, 226);
+        border-right: 2px solid rgb(228, 226, 226);
+        transition: 0.5s;
+      }
+      &:hover .doitac .doitac_ten {
+        color: black;
+        transition: 0.5s;
+      }
+
+      .doitac {
+        margin: 0;
+        line-height: 80px;
+        padding-left: 20px;
+        height: 100%;
+        width: 100%;
+        .doitac_img {
+          width: 55px;
+          height: 55px;
+          margin-top: 10px;
+        }
+        .doitac_ten {
+          padding-left: 20px;
+          font-size: 16px;
+          font-weight: 400;
+          color: rgb(139, 136, 136);
+
+          // letter-spacing: 0.3px;
+        }
+        // .hr{
+        //   width: 100%;
+        //   height: 1px;
+        //   background-color:gray;
+
+        // }
+      }
+    }
+  }
+  .date {
+    // widows: 100%;
+    // height: 100%;
+    background-color: rgba(246, 247, 244, 0.5);
+    padding: 0;
+    border-radius: 5px;
+    .nav-tabs {
+      border: none;
+
+      .nav-item {
+        display: flex;
+        max-width: 118px;
+        border-bottom: 1px solid rgba(219, 218, 218, 0.3);
+        border-right: 1px solid rgba(219, 218, 218, 0.3);
+        border-radius: 0px;
+
+        &:hover .nav-link {
+          border-bottom: 2px solid rgba(219, 218, 218, 0.3);
+          color: red;
+        }
+        // &:active .nav-link {
+        //   background-color:rgb(236, 234, 234);
+        //   border-bottom: 2px solid rgba(219, 218, 218,0.3);
+        // }
+
+        // &:active .active {
+        //   color: red;
+        //   padding: 10px;
+        //   font-size: 22px;
+        // }
+        // &:hover a {
+        //   color: red;
+        // }
+        li {
+          text-align: center;
+        }
+
+        .nav-link {
+          border: none;
+          border-radius: 0px;
+          height: 80px;
+          padding: 10px 0;
+          padding-right: 20px;
+          padding-left: 20px;
+        }
+        a {
+          color: black;
+          line-height: 1.6;
+          font-size: 19px;
+          width: 120px !important;
+          font-weight: 200;
+          // margin: 0 2px;
+          align-items: center;
+          height: 80px;
+        }
+      }
+    }
+    .tab-content {
+      margin-top: -5%;
+      margin-left: 3%;
+
+      .gioChieu {
+        padding-left: 20px;
+        color: rgb(223, 198, 58);
+        font-size: 25px;
+        font-weight: 600;
+        transition: 0.3s;
+
+        &:hover {
+          color: rgb(214, 74, 74);
+          cursor: pointer;
+        }
+      }
+      .content_bhd {
+        padding: 0;
+        margin-bottom: 20px;
+      }
+
+      .img__bhd {
+        width: 50px;
+        height: 50px;
+      }
+
+      .headInfo {
+        cursor: pointer;
+        .name_doitac {
+          font-size: 16px;
+          font-weight: 400;
+          color: rgb(232, 82, 55);
+
+          .name_street {
+            color: black;
+            font-weight: 600;
+            font-size: 14px;
+          }
+        }
+        .name_address {
+          font-size: 12px;
+          font-weight: 400;
+          color: rgb(105, 88, 32);
+        }
+      }
+    }
+  }
+}

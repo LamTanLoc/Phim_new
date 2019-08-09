@@ -1,0 +1,14 @@
+<ng-container *ngIf="phim !== undefined">
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="md_body">
+
+        <iframe class="trailer" #trailer [src]="videoUrl" frameborder="0" allow=" autoplay;fullscreen "></iframe>
+
+
+      </div>
+
+    </div>
+    <button type="button" class="btn" data-dismiss="modal" (click)="closeTrailer()"> x </button>
+  </div>
+</ng-container>

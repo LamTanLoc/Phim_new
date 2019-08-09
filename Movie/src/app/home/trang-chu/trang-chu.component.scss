@@ -1,0 +1,59 @@
+@import "../../../scss/style.scss";
+
+.trangchu {
+  background-image: url("./../../../assets/images/3d-render-spotlights-grunge-brick-wall_1048-6284.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 0;
+ 
+
+  .dexuat {
+    position: relative;
+ 
+    
+
+    .dexuat_box {
+      width: 50%;
+      height: 70px;
+      background-image: url("./../../../assets/images/old-grunge-cement-wall-backgrounds_34552-195.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      bottom: -7.7%;
+      left: 25%;
+      border-radius: 5px;
+      border: 2px solid orange;
+
+      .box_title {
+        font-weight: bold;
+        font-size: 22px;
+        text-align: center;
+        line-height: 70px;
+        color: white;
+
+        letter-spacing: 1px;
+        border-radius: 5px;
+      } 
+    }
+  } 
+  .content_DeXuat {
+    .list_DeXuat {
+      background-image: url("./../../../assets/images/banner-galaxy-abstract-background_47618-35.jpg");
+      // background: linear-gradient(to top, rgba(138, 134, 134, 0.925), rgb(238, 170, 114), rgb(49, 49, 48));
+      padding: 0;
+    }
+  }
+}
+
+.app{
+  background-image: url('./../../../assets/images/backapp.jpg');
+  background-size: contain;
+
+}
+
+.footer{
+ 
+  background: linear-gradient(to bottom, #1a1919,#4e4e4d,#535353,#494848);
+}
+

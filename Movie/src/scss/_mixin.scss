@@ -1,0 +1,21 @@
+$res_sm: "only screen and (max-width:576px)";
+$res_md: "only screen and (max-width:768px)";
+$res_lg: "only screen and (max-width:992px)";
+$res_xl: "only screen and (max-width:1200px)";
+
+@mixin responsive_sm() {
+  @media #{$res_sm} {
+    @content;
+  }
+}
+@mixin responsive_md() {
+  @media #{$res_md} {
+    @content;
+  }
+}
+
+@mixin responsive_lg() {
+    @media #{$res_lg} {
+      @content;
+    }
+  }

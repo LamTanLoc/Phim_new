@@ -1,0 +1,151 @@
+
+<ng-container *ngIf="phim !== undefined && chiTietLichChieu !==  undefined">
+  
+    <div class="ChonVe">
+
+      <div class="ChonVe__LifeCycle">
+        <ul>
+          <li><i routerLink="/chi-tiet-phim/{{chiTietLichChieu.MaPhim}}" class="fa fa-arrow-left display-4"></i></li>
+          <li><a class=" display-4 step active" href="#"><span>01 </span> CHỌN LOẠI VÉ</a></li>
+          <li><a class="display-4 step" href="#"> <span>02 </span> CHỌN GHẾ & THANH TOÁN</a></li>
+          <li><a class=" display-4 step" href="#"> <span>03 </span> KẾT QUẢ ĐẶT VÉ</a></li>
+        </ul>
+      </div>
+
+      <div class="content__ChonVe">
+
+        <div class="col-md-9 choose__content">
+          <div class="doiTac">
+            <img class="doitac_img" src="../../../../assets/images/bhd.png">
+            <span class="name_doitac ">BHD Star Cineplex - <span class="name_address"> 3/2, 3C Đường 3/2, Q.10
+              </span></span>
+            <br>
+            <div class="ChiTietPhim">
+              <span class="display-4 ChiTiet date ">{{chiTietLichChieu.NgayChieuGioChieu| date: "EEEE"}} - </span>
+              <span class="display-4  ChiTiet doitac_ten "> {{chiTietLichChieu.NgayChieuGioChieu| date: "hh:mm"}} -
+              </span>
+              <span class="display-4 ChiTiet doitac_ten ">{{chiTietLichChieu.Rap.TenRap| uppercase}}</span>
+            </div>
+          </div>
+          <div class="row chonVe">
+            <div class="col-sm-4 col-xs-7 typeticket ">Vé người lớn </div>
+            <div class="plus">(Vé 2D)</div>
+            <div class="col-sm-4 priceticketmobile ">{{chiTietLichChieu.GiaVe*soLuongVe | currency:"VND":""}} VND</div>
+            <div class="col-sm-4 col-xs-5 opnum">
+              <span class="  count add" (click)="GiamSoLuongVe()">-</span>
+              <span class="soLuong  px-3  mx-3">{{soLuongVe}}</span>
+              <span class="  count sub" (click)="TangSoLuongVe()">+</span>
+
+            </div>
+          </div>
+          <!-- <div class="row chonCombo">
+          <div class="col-sm-4 col-xs-7 typeticket ">Combo 2 </div>
+          <div class="plus">(1 nước + 1 bắp tự chọn Size Lớn)</div>
+          <div class="col-sm-4 priceticketmobile ">{{giaCombo*soLuongCombo | currency:"VND":""}} VND</div>
+          <div class="col-sm-4 col-xs-5 opnum">
+            <span class="  count add" (click)="GiamSoLuongCombo()">-</span>
+            <span class="soLuong  px-3  mx-3 ">{{soLuongCombo }}</span>
+            <span class="  count sub" (click)="TangSoLuongCombo()">+</span>
+
+          </div>
+
+        </div> -->
+          <div class="row tongTien">
+            <div class="col-md-10 total">
+              <div class="slogan">TỔNG TIỀN</div>
+              <div class="display-3 content__tongTien mx-3">{{TongTienVe() | currency:"VND":""}}
+                VND</div>
+            </div>
+            <div class="col-md-2  chonGheDiv " (click)="ChonGhe()"> <span class="display-4 chonGhe ">CHỌN GHẾ</span>
+            </div>
+          </div>
+          <div class="note">
+            <div class="display-4 slogan__note text-center">
+              *Xin lưu ý, bạn không thể hủy hoặc thay đổi suất chiếu cho vé đã mua.
+            </div>
+            <div class="row hot">
+
+              <div class="col-md-5 hot__line">
+                <p class="display-4  hotlinetitle text-right">HOTLINE</p>
+                <p class=" display-4 costcall text-right">Phí cuộc gọi 1000VND/phút</p>
+
+              </div>
+              <div class="col-md-7 hot__phone">
+                <div class="display-4  phone text-left">1900 545 436</div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+
+
+        <div class="col-md-3 result_content">
+          <div class="img_result">
+
+          </div>
+          <img [src]="phim.HinhAnh" alt="">
+          <div class="blur">
+
+
+            <div class="content">
+              <span> <i class="fa fa-calendar-check"></i></span>
+              <p class=" display-4 date ">{{chiTietLichChieu.NgayChieuGioChieu| date: "EEEE"}}</p>
+
+              <div class="ChiTietPhim">
+
+                <span class="display-4  ChiTiet doitac_ten "> {{chiTietLichChieu.NgayChieuGioChieu| date: "hh:mm"}} -
+                </span>
+                <span class="display-4 ChiTiet doitac_ten ">{{chiTietLichChieu.Rap.TenRap| uppercase}}</span>
+              </div>
+              <p class=" display-4  name ">{{phim.TenPhim}}</p>
+
+              <p class=" display-4  hour ">{{chiTietLichChieu.ThoiLuong}} phút -BHD Star
+                ID/{{chiTietLichChieu.MaPhim}} -
+                IDG/{{chiTietLichChieu.MaNhom}}
+              </p>
+            </div>
+
+          </div>
+          <div class="final">
+            <div class=" final__content">
+              <div class="row content_ve">
+                <div class="col-md-5 col-sm-12 title">Số lượng vé</div>
+                <div class="col-md-2  col-sm-12 SoLuong text-center">{{soLuongVe}}</div>
+                <div class="col-md-5  col-sm-12  SoTien text-right">
+                  {{chiTietLichChieu.GiaVe*soLuongVe | currency:"VND":""}} VND</div>
+              </div>
+              <div class="row content_combo my-2">
+                <div class=" col-md-5  col-sm-12 title">Số lượng Combo</div>
+                <div class="col-md-2   col-sm-12 SoLuong text-center"></div>
+                <div class="col-md-5  col-sm-12 SoTien text-right">Chưa Chọn</div>
+              </div>
+              <div class="row content_gheNgoi">
+                <div class="col-md-5  col-sm-12 title">Ghế ngồi</div>
+                <div class="col-md-7  col-sm-12  SoGhe text-right">Chưa Chọn</div>
+
+              </div>
+              <div class="hr"></div>
+              <div class="row content_tongtienve">
+                <div class="col-md-6 display-4 title">TỔNG TIỀN</div>
+                <div class="col-md-6  money__total text-right">
+                  {{TongTienVe() | currency:"VND":""}} VND</div>
+
+              </div>
+
+
+
+            </div>
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+  </ng-container>

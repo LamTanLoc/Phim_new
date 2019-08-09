@@ -1,0 +1,51 @@
+.tintuc {
+  img {
+    border-radius: 5px;
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .Title {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    transition: 0.3s;
+    font-weight: 400;
+    &:hover {
+      color: rgb(241, 31, 31);
+    }
+  }
+  .newsTitle {
+    color: rgb(63, 61, 61);
+    font-size: 13px;
+  }
+}
+.hr {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, rgba(175, 96, 6, 0.925), rgb(241, 163, 93), rgb(156, 75, 5));
+  border-radius: 50%;
+}
+
+.icon {
+  display: flex;
+  margin: 3px;
+  p {
+    font-size: 13px;
+    color: rgb(161, 161, 160);
+  }
+
+  .icon__img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 17px;
+    height: 17px;
+    margin: 0 10px;
+    &:hover {
+      padding: 1px;
+    }
+  }
+}

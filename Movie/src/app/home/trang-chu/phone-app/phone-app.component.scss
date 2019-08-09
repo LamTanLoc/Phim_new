@@ -1,0 +1,59 @@
+@import "../../../../scss/style.scss";
+
+
+.footer_content {
+    .footer_left {
+      padding: 100px 0;
+      .textLeft {
+        font-size: 36px;
+        font-weight: 250;
+        letter-spacing: 1px;
+        word-spacing: 1px;
+      }
+      .textSmallLeft {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        word-spacing: 0.5px;
+      }
+      .button {
+        font-size: 18px;
+        background-color: rgb(168, 27, 27);
+        border: 1px solid rgb(94, 88, 88);
+        color: white;
+        &:hover {
+          background: linear-gradient(to right, #38372f, #e62a49);
+          border: 1px solid white;
+          color: white;
+       
+        }
+      }
+      .textAppUnder {
+        letter-spacing: 0.5px;
+        word-spacing: 0.5px;
+        font-size: 15px;
+  
+        a {
+          font-size: 14px;
+          color: white;
+          text-decoration: underline;
+          letter-spacing: 0.5px;
+          word-spacing: 0.5px;
+        }
+      }
+    }
+  
+    .footer__app {
+      img {
+     
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 440px;
+        height: 330px;
+        border-radius: 20px;
+        margin-top: 150px;
+      }
+    }
+  }
+  
+  
+  

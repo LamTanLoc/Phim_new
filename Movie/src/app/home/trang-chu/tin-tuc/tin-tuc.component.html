@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-md-12 text-center" #tintuc>
+    <button class="btn btn-info" (click)="chonLoaiTin('DienAnh')"> Điện ảnh </button>
+    <button class="btn btn-info m-4" (click)="chonLoaiTin('Review')"> Review </button>
+    <button class="btn btn-info" (click)="chonLoaiTin('KhuyenMai')">Khuyến mãi</button>
+  </div>
+</div>
+
+
+<div class="container" [ngSwitch]="loaiTinTuc">
+
+  <div *ngSwitchCase="'DienAnh'">
+    <app-dien-anh></app-dien-anh>
+  </div>
+
+  <div *ngSwitchCase="'Review'">
+    <app-review></app-review>
+  </div>
+
+
+  <div *ngSwitchCase="'KhuyenMai'">
+    <app-khuyen-mai></app-khuyen-mai>
+  </div>
+
+</div>

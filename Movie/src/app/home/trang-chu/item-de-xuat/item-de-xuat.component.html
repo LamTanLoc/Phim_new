@@ -1,0 +1,46 @@
+<ng-container *ngIf="phim !== null">
+    <div class="card mt-5 mb-4">
+        <div class="item">
+            <div class="showing__item">
+
+                <img class="card-img-top" routerLink="./chi-tiet-phim" [src]="phim.HinhAnh" alt="">
+                <div class="content_item">
+                    <div class="div_name"> <span class="display-4 name ">{{phim.TenPhim}}</span></div>
+
+                    <span class="display-4  ngayKhoiChieu">Ngày khởi chiếu:
+                        {{phim.NgayKhoiChieu | date : "dd - MM - yyyy"}}</span>
+
+                </div>
+
+
+                <!-- <div class="showing__box">
+                <p class="display-4"> <a class="btn" (click)="xemChiTiet()"> Xem chi tiết </a></p>
+            </div> -->
+
+                <!-- <div class="content_item">
+                    <span class="name ">{{phim.TenPhim}}</span>
+                </div>
+            </div> -->
+                <!-- <div class="showing__content">
+                <div class="play">
+                    <i class="fa fa-play" (click)="xemTrailer()" data-toggle="modal" data-target="#myModal"></i>
+                </div>
+            </div> -->
+            </div>
+            <div class="blur">
+                <div class="showing__content">
+                    <div class="play">
+                        <i class="fa fa-play" (click)="xemTrailer()" data-toggle="modal" data-target="#myModal"></i>
+                    </div>
+                </div>
+                <div class="content_btn">
+                    <button class="btn display-4 form-control btn_xemChiTiet" (click)="xemChiTiet()">Xem chi
+                        tiết</button>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</ng-container>

@@ -1,0 +1,161 @@
+.DangNhap {
+  position: fixed;
+  width: 30%;
+  z-index: 3;
+  height: 800px;
+  background-image: url("./../../../assets/images/red-label-overlap-dark-grey-metallic-background_33869-1241.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+
+  .blur {
+    width: 100%;
+    height: 800px;
+
+    background-color: rgba(27, 27, 27, 0.4);
+    // background-color: transparent;
+
+    .form {
+      padding: 18px;
+      display: flex;
+      .dangNhap {
+        .title {
+          font-size: 20px;
+          font-weight: 400;
+          color: rgb(250, 93, 65);
+          word-spacing: 1px;
+          transition: 0.2s;
+          cursor: pointer;
+          &:hover {
+            font-size: 18px;
+            color: rgb(250, 93, 65);
+            font-size: 20px;
+            // color: white;
+          }
+        }
+      }
+      .dangky {
+        .title {
+          font-size: 16px;
+          font-weight: 400;
+          color: rgb(231, 229, 229);
+          word-spacing: 1px;
+          transition: 0.2s;
+          cursor: pointer;
+          &:hover {
+            color: rgb(250, 93, 65);
+            font-size: 18px;
+          }
+        }
+      }
+
+      .hr {
+        width: 1px;
+        height: 22px;
+        background-color: rgb(170, 167, 167);
+      }
+    }
+
+    .formDN {
+      padding: 0px 15px;
+
+      .TaiKhoan {
+        margin-top: 30px;
+        display: flex;
+        input {
+          border: none;
+          border-radius: 0px;
+          background-color: transparent;
+          border-bottom: 1px solid white;
+          color: white;
+
+          &:focus {
+            box-shadow: 0 0 0 0 transparent;
+          }
+          &::placeholder {
+            color: rgb(214, 212, 212);
+            font-weight: 100;
+            font-size: 13px;
+          }
+        }
+      }
+      .Password {
+        margin-top: 47px;
+        display: flex;
+        input {
+          border: none;
+          border-radius: 0px;
+          background-color: transparent;
+          border-bottom: 1px solid white;
+          color: white;
+
+          &:focus {
+            box-shadow: 0 0 0 0 transparent;
+          }
+          &::placeholder {
+            color: rgb(214, 212, 212);
+            font-weight: 100;
+            font-size: 13px;
+          }
+        }
+      }
+
+      .dangnhap {
+        margin-top: 49px;
+        width: 30%;
+        height: 40px;
+        // background-color:rgb(250, 93, 65);
+        border: 1px solid white;
+        border-radius: 5px;
+        margin-left: 30%;
+        .btn_DangNhap {
+          background-color: rgb(250, 93, 65);
+          // border: 1px solid rgb(250, 93, 65);
+          background-size: cover;
+          color: white;
+          font-weight: 500;
+          transition: 0.5s;
+          &:hover {
+            background-color: rgba(236, 46, 40, 0.6);
+            color: white;
+            // border: 1px solid rgb(250, 93, 65);
+          }
+        }
+        
+      }
+      .comeBack{
+        // margin-top: 9%;
+        // margin-left: 53%;
+        margin-top: 7.5%;
+        margin-left: 69%;
+        color: rgb(67, 142, 186);
+        font-size: 13px;
+        font-weight: 400;
+        cursor: pointer;
+        transition: 0.3s;
+        i{
+          font-size:15px ;
+          padding-right: 3px;
+         
+          
+        }
+        &:hover{
+          color: rgb(250, 250, 250);
+       
+        }
+        
+
+      }
+    }
+  }
+  &::before {
+    width: 235%;
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    background-color: rgba(11, 11, 11, 0.8);
+  }
+}

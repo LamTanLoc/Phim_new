@@ -1,0 +1,119 @@
+.footer__content {
+
+
+  .content__manage {
+    display: flex;
+    
+
+    .manage_left {
+     
+      a {
+        color: rgb(24, 16, 16);
+        font-size: 13px;
+        font-weight: 400;
+        transition: 0.5s;
+        &:hover {
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
+    .manage_right {
+      margin-top: 67px;
+
+      a {
+        color: rgb(24, 16, 16);
+        font-size: 13px;
+        font-weight: 400;
+        transition: 0.5s;
+  
+        &:hover {
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .content__contact {
+    .title {
+      color: white;
+      font-size: 13px;
+      font-weight: 400;
+    }
+
+    a{
+        img {
+
+            border-radius: 50%;
+            height: 35px;
+            width: 35px;
+            margin-right: 12px;
+       
+            border:2px solid transparent; 
+
+            &:hover{
+             
+                border:2px solid white; 
+
+            }
+            
+           
+          }
+
+    }
+   
+  }
+
+  .content__app{
+    .title {
+        color: white;
+        font-size: 13px;
+        font-weight: 400;
+      }
+    
+      a{
+          img{
+              width: 35px;
+              height: 35px;
+          }
+          .icon_social{
+            height: 40px;
+          }
+          .iconApp_tw{
+            border-radius: 50%;
+          }
+      }
+  }
+
+  .hrFooter{
+    background: linear-gradient(to right, rgba(240, 202, 158, 0.925), rgb(221, 107, 7));
+      width:100%;
+      height: 1px;
+      border-radius: 5px;
+      
+
+  }
+
+  .infoFooter{
+    .footer__slogan{
+      color: white;
+      font-size: 14px;
+    }
+    .footer_ins{
+      color: rgb(24, 16, 16);
+      font-size: 13px;
+
+    }
+
+  }
+  .imgFooter{
+      img{
+          width: 140px;
+          height: 55px;
+          margin-right: 40px;
+
+      }
+  }
+  
+}

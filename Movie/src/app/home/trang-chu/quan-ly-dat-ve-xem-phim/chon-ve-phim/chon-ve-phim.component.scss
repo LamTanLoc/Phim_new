@@ -1,0 +1,419 @@
+.ChonVe {
+  width: 100%;
+
+  //   background-image: url("../../../../../assets/images/dark-wall-texture-slate-background_24972-263.jpg");
+
+  //   img{
+  //     width: 100%;
+  //     height: 100%;
+  //     background-size: cover;
+
+  //   }
+  .ChonVe__LifeCycle {
+    height: 82px;
+    width: 100%;
+    background-color: rgb(245, 247, 224);
+
+    ul {
+      display: flex;
+
+      li {
+        list-style-type: none;
+        align-items: center;
+        position: relative;
+        i {
+          font-size: 22px;
+          color: rgb(59, 58, 58);
+          line-height: 82px;
+          margin-right: 40px;
+          cursor: pointer;
+        }
+
+        a {
+          text-decoration: none;
+          line-height: 82px;
+          cursor: no-drop;
+          font-size: 13px;
+          font-weight: 500;
+          color: rgb(59, 58, 58);
+          padding: 0 30px;
+
+          span {
+            font-size: 19px;
+          }
+        }
+        .active {
+          color: rgb(250, 93, 65);
+          &::after {
+            content: "";
+            position: absolute;
+            top: 80%;
+            left: 0%;
+            height: 2px;
+            width: 100%;
+            background-color: red;
+          }
+        }
+      }
+    }
+  }
+
+  .content__ChonVe {
+    width: 100%;
+    height: 680px;
+    display: flex;
+
+    .choose__content {
+      background-color: rgb(247, 247, 244);
+      height: 100%;
+      width: 100%;
+      position: relative;
+
+      .doiTac {
+        margin-left: 83px;
+        margin-top: 1.5%;
+        .doitac_img {
+          width: 57px;
+          height: 57px;
+          margin-top: 20px;
+          margin-right: 15px;
+        }
+        .name_doitac {
+          font-size: 15px;
+          font-weight: 400;
+          color: rgb(232, 82, 55);
+        }
+        .name_address {
+          font-size: 12px;
+          font-weight: 400;
+          color: rgb(105, 88, 32);
+        }
+        .ChiTietPhim {
+          position: absolute;
+          top: 10%;
+          left: 16%;
+
+          .ChiTiet {
+            font-size: 13px;
+            font-weight: 400;
+          }
+        }
+      }
+      .chonVe {
+        width: 84%;
+        height: 90px;
+        border-top: 1px solid rgb(110, 109, 109);
+        border-bottom: 1px solid rgb(110, 109, 109);
+        margin: 4% 0% auto 8%;
+        line-height: 83px;
+        .typeticket {
+          color: black;
+          font-size: 16px;
+          font-weight: 500;
+          padding: 0px;
+          position: relative;
+        }
+        .plus {
+          position: absolute;
+          top: 23%;
+          left: 9%;
+          color: rgb(51, 50, 50);
+          font-size: 12px;
+        }
+        .priceticketmobile {
+          text-align: center;
+          font-size: 18px;
+          font-weight: 500;
+          color: rgb(54, 133, 54);
+          line-height: 83px;
+        }
+        .opnum {
+          text-align: right;
+          padding: 0;
+
+          .count {
+            font-size: 28px;
+            color: rgb(250, 93, 65);
+            cursor: pointer;
+          }
+          .soLuong {
+            border: 1px solid rgb(150, 149, 149);
+            border-radius: 4px;
+            padding: 3px;
+          }
+        }
+      }
+      // .chonCombo {
+      //   width: 84%;
+      //   height: 90px;
+      //   border-bottom: 1px solid rgb(110, 109, 109);
+      //   margin: 0 auto;
+      //   line-height: 83px;
+      //   .typeticket {
+      //     color: black;
+      //     font-size: 16px;
+      //     font-weight: 500;
+      //     padding: 0px;
+      //     position: relative;
+      //   }
+      //   .plus {
+      //     position: absolute;
+      //     top: 36%;
+      //     left: 9%;
+      //     color: rgb(51, 50, 50);
+      //     font-size: 12px;
+      //   }
+      //   .priceticketmobile {
+      //     text-align: center;
+      //     font-size: 18px;
+      //     font-weight: 500;
+      //     color: rgb(54, 133, 54);
+      //   }
+      //   .opnum {
+      //     text-align: right;
+      //     padding: 0;
+      //     .count {
+      //       font-size: 28px;
+      //       color: rgb(250, 93, 65);
+      //       cursor: pointer;
+      //     }
+      //     .soLuong {
+      //       border: 1px solid rgb(150, 149, 149);
+      //       border-radius: 4px;
+      //       padding: 3px;
+      //     }
+      //   }
+      // }
+      .tongTien {
+        width: 84%;
+        height: 120px;
+        margin-top: 8%;
+        margin-left: 8%;
+        border: 1px solid gray;
+        border-radius: 8px;
+        .total {
+          position: relative;
+
+          .slogan {
+            letter-spacing: 1px;
+            position: absolute;
+            top: 23%;
+            left: 5%;
+            color: #797777;
+            font-size: 10px;
+            font-weight: 400;
+          }
+          .content__tongTien {
+            line-height: 120px;
+            font-size: 25px;
+            font-weight: 500;
+            color: rgb(54, 133, 54);
+            margin-right: 5px;
+          }
+        }
+        .chonGheDiv {
+          border-top-right-radius: 6px;
+          border-bottom-right-radius: 6px;
+          height: 118px;
+          background: linear-gradient(to right, rgba(71, 153, 16, 0.925), rgb(123, 218, 15), rgb(158, 236, 106));
+          cursor: pointer;
+
+          .chonGhe {
+            font-size: 15px;
+            font-weight: 500;
+            color: rgb(243, 241, 241);
+            line-height: 118px;
+            margin-left: 15px;
+          }
+        }
+      }
+      .note {
+        margin-top: 5%;
+        .slogan__note {
+          color: gray;
+          font-size: 12px;
+          font-weight: 300;
+          margin-bottom: 23px;
+        }
+        .hot {
+          width: 45%;
+          height: 70px;
+
+          margin: 0 auto;
+          .hot__line {
+            height: 80px;
+            padding: 0;
+            position: relative;
+            .hotlinetitle {
+              font-size: 21px;
+              color: rgb(124, 121, 121);
+            }
+            .costcall {
+              font-size: 10px;
+              color: rgb(232, 82, 55);
+              position: absolute;
+              top: 31%;
+              right: 0%;
+            }
+          }
+          .hot__phone {
+            padding: 0;
+            height: 80px;
+            .phone {
+              font-size: 34px;
+              color: black;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+
+    .result_content {
+      background-image: url("../../../../../assets/images/clean-white-hexagonal-medical-concept-background_1017-19739.png");
+
+      width: 100%;
+
+      background-size: contain;
+      background-repeat: repeat-y;
+      img {
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 95%;
+        height: 71%;
+        position: relative;
+        box-shadow: -16px -15px 9px -3px rgba(28, 29, 29, 0.5);
+        top: 4%;
+        left: 3%;
+        margin-top: 27px;
+      }
+      .blur {
+        width: 87%;
+        height: 71%;
+        position: absolute;
+        top: 4%;
+        left: 7%;
+        background: linear-gradient(to bottom, rgba(117, 116, 116, 0.4), rgba(5, 2, 2, 0.6), rgba(5, 2, 2, 0.9));
+
+        color: white;
+        .content {
+          position: absolute;
+          bottom: 15%;
+          left: 4%;
+          .ChiTietPhim {
+            position: absolute;
+            top: 11%;
+            left: 1%;
+
+            .doitac_ten {
+              font-size: 11px;
+              color: white;
+              font-weight: 400;
+            }
+          }
+          span {
+            font-size: 24px;
+            color: rgb(250, 93, 65);
+            width: 50px;
+            height: 50px;
+          }
+          .name {
+            font-size: 24px;
+            font-weight: 300;
+            margin-right: 10px;
+            word-spacing: 1px;
+
+            padding: 0;
+          }
+          .date {
+            font-size: 28px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            padding: 0;
+            color: rgb(238, 128, 2);
+          }
+          .hour {
+            font-size: 12px;
+            padding: 0;
+            margin-right: 6px;
+          }
+        }
+      }
+      .final {
+        width: 87%;
+        position: absolute;
+        top: 77%;
+        left: 7%;
+        height: 155px;
+        // background-color: rgb(211, 216, 211);
+        justify-content: center;
+
+        .final__content {
+          padding: 0;
+          width: 100%;
+          .content_ve {
+            display: flex;
+            color: rgb(46, 45, 45);
+            font-size: 14px;
+            font-weight: 400;
+            padding: 0;
+
+            .title {
+            }
+            .SoLuong {
+              // margin: 0 65px;
+            }
+            .SoTien {
+            }
+          }
+
+          .content_combo {
+            display: flex;
+            color: rgb(46, 45, 45);
+            font-size: 14px;
+
+            padding: 0;
+
+            .title {
+            }
+            .SoLuong {
+            }
+            .SoTien {
+            }
+          }
+          .content_gheNgoi {
+            display: flex;
+            color: rgb(46, 45, 45);
+            font-size: 14px;
+
+            padding: 0;
+
+            .title {
+            }
+
+            .SoGhe {
+            }
+          }
+          .hr {
+            margin-top: 20px;
+            width: 100%;
+            height: 1px;
+            background-color: rgb(187, 129, 3);
+          }
+          .content_tongtienve {
+            display: flex;
+            color: rgb(194, 106, 5);
+            padding: 0;
+            margin-top: 15px;
+            .title {
+              font-size: 20px;
+              font-weight: 500;
+            }
+            .money__total {
+            }
+          }
+        }
+      }
+    }
+  }
+}

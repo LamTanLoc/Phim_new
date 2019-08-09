@@ -1,0 +1,235 @@
+<ng-container *ngIf="phim !== undefined && item !== undefined  ">
+  <div class="container-fluid chiTiet">
+
+    <div class="blur"></div>
+
+    <div class="container chiTiet__content">
+      <div class="row" >
+        <div class="col-md-4 col-sm-12 text-center">
+          <img class="img" [src]="phim.HinhAnh" alt="">
+          <div class="showing__content">
+            <div class="play">
+              <i class="fa fa-play" (click)="xemTrailer()" data-toggle="modal" data-target="#myModal"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-5 col-sm-12 mt-5">
+          <div class=" info mt-4 ml-4">
+            <p class=" display-4 date content"> <span><b>Ngày chiếu</b></span>
+              {{phim.NgayKhoiChieu| date: "dd.MM.yyyy"}}
+            </p>
+            <p class="display-4 name ">{{phim.TenPhim}}</p>
+            <p class="hour content">{{phim.LichChieu[1].ThoiLuong}} phút -
+              ID/{{phim.MaPhim}} -
+              IDG/{{phim.MaNhom}}
+            </p>
+            <button class="btn  btn_muaVe mt-1 " #lichchieu (click)="Scroll('lichchieu')">Mua vé ngay</button>
+          </div>
+        </div>
+        <div class="col-md-3 mt-5">
+          <div class="circle_root">
+            <div class="circle_child">
+              <p id="chaThangSao" class="danhgia display-4  text-center">{{phim.DanhGia}}.0</p>
+            </div>
+            <div class="star ">
+              <p #saoStar id="star"> <i *ngFor="let item of saone" class="fa fa-star" aria-hidden="true"></i> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content_phim mt-5" >
+
+        <div class="row" >
+          <div class="col-md-12 text-center " >
+            <button class="btn btn-info" (click)="chonLoaiTin('LichChieu')"> Lịch chiếu </button>
+            <button class="btn btn-info m-4" (click)="chonLoaiTin('Thongtin')"> Thông tin </button>
+            <button class="btn btn-info" (click)="chonLoaiTin('Danhgia')">Đánh giá</button>
+          </div>
+        </div>
+
+        <div class="container" [ngSwitch]="loaiTinTuc">
+
+          <div *ngSwitchCase="'LichChieu'">
+            <div class="container row content__LichChieu">
+              <div class="col-md-3 p-0">
+
+                <ul>
+                  <li>
+                    <div class="row doitac  ">
+                      <img class="doitac_img" src="../../../../assets/images/bhd.png">
+                      <p class="doitac_ten ">BHD Star Cineplex</p>
+                      <p class=" date ">{{phim.NgayChieuGioChieu| date: "EEEE"}}</p>
+
+                    </div>
+
+                  </li>
+                  <li>
+                    <div class="row doitac ">
+                      <img class="doitac_img" src="../../../../assets/images/logo.png">
+                      <p class="doitac_ten ">Galaxy Cinema</p>
+
+                    </div>
+
+                  </li>
+
+                  <li>
+                    <div class="row doitac ">
+                      <img class="doitac_img" src="../../../../assets/images/cinestar.png">
+                      <p class="doitac_ten ">CineStar</p>
+
+                    </div>
+
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-md-9 date" id="accordion">
+                <div>
+                  <ul class="nav nav-tabs text-center mb-4">
+
+                    <li class="nav-item display-4  " data-toggle="collapse" href="#demo" data-target="#demo"
+                      *ngFor="let item of lichChieu">
+                      <a  id="getDate" class=" text-center display-4 nav-link " data-toggle="tab" href="#home"
+                        (click)="NgayGioChieuPhim(item)">
+                        {{item.NgayChieuGioChieu | date : "EEEE    dd"}}</a>
+                    </li>
+
+
+                  </ul>
+
+                  <div class="tab-content " *ngIf="item !== undefined">
+                    <div id="home" class="container tab-pane active"><br>
+                      <div class="row ">
+                        <img class="img__bhd" src="./../../../../../assets/images/bhd-star-vincom.jpg" alt="">
+                        <div class="headInfo ml-4">
+                          <span class="display-4 name_doitac">BHD Star Cineplex - <span
+                              class="name_street">3/2</span></span>
+                          <br>
+                          <span class=" name_address">L5-Vincom 3/2, 3C Đường 3/2, Q.10</span>
+                        </div>
+                      </div>
+                      <div class="row mt-4 collapse " id="demo" data-parent="#accordion">
+                        
+                        <img src="./../../../../../assets/images/2_0.png" alt="" />
+
+                        <span  (click)="ChonVe(item)"
+                          class="gioChieu">{{item.NgayChieuGioChieu| date: "hh:mm"}}
+                        </span>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div *ngSwitchCase="'Thongtin'" class="row">
+            <div class="col md-1">
+            </div>
+            <div class="col-md-6 px-0">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <p class="brand ">Ngày phát hành</p>
+                    </td>
+                    <td>
+
+                      <p class="date content contents"> {{phim.NgayKhoiChieu| date: "dd.MM.yyyy"}}</p>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="brand ">Đạo diễn</p>
+                    </td>
+                    <td>
+
+                      <p class="date content contents"> Takahiro Miki</p>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="brand ">Diễn viên</p>
+                    </td>
+                    <td>
+
+                      <p class="date content contents"> </p>
+                    </td>
+
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <p class="brand">Đánh giá</p>
+                    </td>
+                    <td>
+                      <p class="danhgia content contents">{{phim.DanhGia}}</p>
+                    </td>
+
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <p class="brand">Thời lượng </p>
+                    </td>
+                    <td>
+                      <p class="hour content contents">{{phim.LichChieu[1].ThoiLuong}} phút - ID/{{phim.MaPhim}} -
+                        IDG/{{phim.MaNhom}}
+                      </p>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="brand">Định dạng</p>
+                    </td>
+                    <td>
+                      <p class="danhgia content contents">2D/Digital</p>
+                    </td>
+
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+            <div class="col-md-5 ">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <p class="brand" style="width:128px">Mô tả </p>
+                    </td>
+                  </tr>
+
+                  <tr>
+
+                    <td>
+                      <p class="mota content"> {{phim.MoTa}}</p>
+                    </td>
+
+
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div *ngSwitchCase="'Danhgia'">
+            <div class="row">
+              <div class="col-md-6"></div>
+
+              <div class="col-md-6">
+                <div class="spinner-border text-warning mt-5 "></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<!-- <app-modal></app-modal> -->

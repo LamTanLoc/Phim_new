@@ -1,0 +1,104 @@
+<div class="container DangKy" *ngIf="anDangKy">
+  <div class="blur">
+    <div class="form">
+
+      <div class="dangky">
+        <a class="display-4 title active"  >Đăng ký</a>
+
+      </div>
+      <div class="hr mx-3"></div>
+      <div class="dangNhap">
+        <a class="display-4 title"  (click)="HienThiDangNhap()" >Đăng nhập</a>
+        <!-- routerLink="/form/dang-nhap" -->
+
+      </div>
+
+
+
+
+    </div>
+
+    <form #formDangKy="ngForm" class="formDK">
+      <div class="row hoten">
+        <div class="col-md-6 ">
+          <div class="form-group ">
+            <div class="input-group">
+              <input type="text" class="form-control" minlength="1" maxlength="7" #Ho="ngModel" placeholder="Họ"
+                name="Ho" ngModel required>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group ">
+            <div class="input-group ">
+              <input type="text" class="form-control" minlength="1" maxlength="7" #Ten="ngModel" placeholder="Tên"
+                name="Ten" ngModel required>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row TaiKhoan">
+        <div class="col-md-12 ">
+          <div class="input-group">
+            <input type="text" class="form-control" minlength="1" maxlength="7" #TaiKhoan="ngModel" placeholder="Tài khoản"
+              name="TaiKhoan" ngModel required>
+          </div>
+        </div>
+      </div>
+
+      <div class="row Password">
+        <div class="col-md-6 ">
+          <div class="form-group ">
+            <div class="input-group">
+              <input type="password" class="form-control" minlength="1" maxlength="7" #MatKhau="ngModel"
+                placeholder="Mật khẩu" name="MatKhau" ngModel required>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group ">
+            <div class="input-group ">
+              <input type="password" class="form-control" minlength="1" maxlength="7" #NhapLaiMatKhau="ngModel"
+                placeholder="Nhập lại mật khẩu" name="NhapLaiMatKhau" ngModel required>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row Email">
+        <div class="col-md-12 ">
+          <div class="input-group">
+            <input type="email" class="form-control" minlength="1" maxlength="7" #Email="ngModel" placeholder="Email"
+              name="Email" ngModel required>
+          </div>
+        </div>
+      </div>
+
+      <div class="row Date">
+        <div class="col-md-12 ">
+          <div class="input-group">
+            <input type="date" class="form-control" minlength="1" maxlength="7" #NgaySinh="ngModel"
+              placeholder="Ngày sinh" name="NgaySinh" ngModel required>
+          </div>
+        </div>
+      </div>
+      <div class="row SoDienThoai">
+        <div class="col-md-12 ">
+          <div class="input-group">
+            <input type="text" class="form-control" minlength="1" maxlength="7" #SoDienThoai="ngModel"
+              placeholder="Số điện thoại" name="SoDienThoai" ngModel required>
+          </div>
+        </div>
+      </div>
+
+      <div class="DangKy">
+        <button type="submit" class="btn btn_DangKy form-control" (click)="DangKy(formDangKy.value)">Đăng ký</button>
+      </div>
+      <p  class="display-4 comeBack" (click)="anDangKy = false" ><i class="fa fa-repeat" aria-hidden="true"></i> Quay lại</p>
+  
+    </form>
+   
+  </div>
+</div>
+<app-login *ngIf="anHienDN"></app-login>

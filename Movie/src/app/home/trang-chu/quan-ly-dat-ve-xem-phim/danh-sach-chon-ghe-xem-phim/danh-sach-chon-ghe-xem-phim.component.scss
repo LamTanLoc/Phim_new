@@ -1,0 +1,607 @@
+.ChonGhe {
+  width: 100%;
+
+  .ChonGhe__LifeCycle {
+    height: 82px;
+    width: 100%;
+    background-color: rgb(245, 247, 224);
+
+    ul {
+      display: flex;
+
+      li {
+        list-style-type: none;
+        align-items: center;
+        position: relative;
+
+        i {
+          font-size: 22px;
+          color: rgb(59, 58, 58);
+          line-height: 82px;
+          margin-right: 40px;
+          cursor: pointer;
+          // &:disabled {
+          // }
+        }
+
+        a {
+          text-decoration: none;
+          line-height: 82px;
+          cursor: no-drop;
+          font-size: 13px;
+          font-weight: 500;
+          color: rgb(59, 58, 58);
+          padding: 0 30px;
+
+          span {
+            font-size: 19px;
+          }
+        }
+        .active {
+          color: rgb(250, 93, 65);
+          &::after {
+            content: "";
+            position: absolute;
+            top: 80%;
+            left: 0%;
+            height: 2px;
+            width: 100%;
+            background-color: red;
+          }
+        }
+      }
+    }
+  }
+  .content__ChonGhe {
+    width: 100%;
+    height: 680px;
+    display: flex;
+    background-color: rgb(167, 144, 144);
+    .choose__content {
+      background-color: rgb(247, 247, 244);
+      // background-image: url("../../../../../assets/images/smooth-dark-blue-with-black-vignette-studio-well-use-as-background-business-report-digital-website-template_1258-748.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+      position: relative;
+      .doiTac {
+        margin-left: 83px;
+        margin-top: 0.5%;
+        margin-bottom: 3%;
+        .doitac_img {
+          width: 57px;
+          height: 57px;
+          margin-top: 20px;
+          margin-right: 15px;
+        }
+        .name_doitac {
+          font-size: 15px;
+          font-weight: 400;
+          color: rgb(232, 82, 55);
+        }
+        .name_address {
+          font-size: 12px;
+          font-weight: 400;
+          color: rgb(105, 88, 32);
+        }
+        .ChiTietPhim {
+          position: absolute;
+          top: 9%;
+          left: 16%;
+
+          .ChiTiet {
+            font-size: 13px;
+            font-weight: 400;
+          }
+        }
+      }
+      .screen {
+        margin-bottom: 94px;
+        .screen__display {
+          margin: 0 auto;
+          width: 80%;
+          height: 8px;
+          img {
+            width: 100%;
+            border-radius: 10px;
+          }
+          // box-shadow: 0px 44px 63px 21px white;
+          // background-color: rgb(29, 28, 28);
+          // background-color: rgb(85, 63, 63);
+          // border-top-left-radius: 5px;
+          // border-top-right-radius: 5px;
+          // position: relative;
+          // .screen__shadow {
+          //   position: absolute;
+          //   width: 85%;
+          //   height: 3px;
+          //   top: 23%;
+          //   left: 7%;
+          //   // box-shadow: 12px 3px 5px 6px black;
+          //   box-shadow: 0 40px 60px 19px #6b5959;
+          // }
+        }
+
+        .title {
+          font-size: 14px;
+          font-weight: 500;
+          text-align: center;
+          letter-spacing: 2px;
+          word-spacing: 2px;
+          margin-top: 10px;
+        }
+      }
+      .DanhSachcGhe {
+        width: 94%;
+        margin: 0 auto;
+
+        .letter {
+          margin-top: 13px;
+          margin-bottom: 30px;
+          font-size: 16px;
+          text-align: center;
+          color: rgb(12, 10, 10);
+          font-weight: 400;
+        }
+        .gheNgoi {
+          margin-bottom: 80px;
+        }
+
+        .notes {
+          margin: 0 auto;
+          display: flex;
+          .gheTrong {
+            display: flex;
+            .icon {
+              width: 12px;
+              height: 12px;
+              background-color: white;
+              border: 1px solid rgb(250, 93, 65);
+              border-radius: 2px;
+              margin-right: 4px;
+            }
+            .title {
+              font-size: 11px;
+              font-weight: 400;
+            }
+          }
+          .gheDangChon {
+            display: flex;
+            .icon {
+              width: 12px;
+              height: 12px;
+              background-color: rgb(250, 93, 65);
+              border: 1px solid white;
+              border-radius: 2px;
+              margin-right: 4px;
+            }
+            .title {
+              font-size: 11px;
+              font-weight: 400;
+            }
+          }
+          .gheKhongTheChon {
+            display: flex;
+            .icon {
+              width: 12px;
+              height: 12px;
+              background-color: rgb(187, 13, 13);
+              border: 1px solid rgb(250, 93, 65);
+              border-radius: 2px;
+              margin-right: 4px;
+            }
+            .title {
+              font-size: 11px;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+    .result_content {
+      background-image: url("../../../../../assets/images/bokeh-lights-black-background_23-2147955985.jpg");
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+
+      // img {
+      //   background-size: cover;
+      //   background-repeat: no-repeat;
+      //   width: 95%;
+      //   height: 71%;
+      //   position: relative;
+      //   box-shadow: -14px -15px 9px 2px rgba(124, 124, 124, 0.5);
+      //   top: 4%;
+      //   left: 3%;
+      //   margin-top: 27px;
+      // }
+      // .blur {
+      //   width: 87%;
+      //   height: 71%;
+      //   position: absolute;
+      //   top: 4%;
+      //   left: 7%;
+      //   background: linear-gradient(to bottom, rgba(117, 116, 116, 0.4), rgba(5, 2, 2, 0.6), rgba(5, 2, 2, 0.9));
+
+      //   color: white;
+      //   .content {
+      //     position: absolute;
+      //     bottom: 15%;
+      //     left: 4%;
+      //     span {
+      //       font-size: 24px;
+      //       color: rgb(250, 93, 65);
+      //       width: 50px;
+      //       height: 50px;
+      //     }
+      //     .name {
+      //       font-size: 24px;
+      //       font-weight: 300;
+      //       margin-right: 10px;
+      //       word-spacing: 1px;
+
+      //       padding: 0;
+      //     }
+      //     .date {
+      //       font-size: 28px;
+      //       font-weight: 400;
+      //       letter-spacing: 3px;
+      //       padding: 0;
+      //       color: rgb(238, 128, 2);
+      //     }
+      //     .hour {
+      //       font-size: 12px;
+      //       padding: 0;
+      //       margin-right: 6px;
+      //     }
+      //   }
+      // }
+      // .final {
+      //   width: 87%;
+      //   position: absolute;
+      //   top: 77%;
+      //   left: 7%;
+      //   height: 155px;
+      //   // background-color: rgb(211, 216, 211);
+      //   justify-content: center;
+
+      //   .final__content {
+      //     padding: 0;
+      //     width: 100%;
+      //     .content_ve {
+      //       display: flex;
+      //       color: rgb(46, 45, 45);
+      //       font-size: 14px;
+      //       font-weight: 400;
+      //       padding: 0;
+
+      //       .title {
+      //       }
+      //       .SoLuong {
+      //         // margin: 0 65px;
+      //       }
+      //       .SoTien {
+      //       }
+      //     }
+
+      //     .content_combo {
+      //       display: flex;
+      //       color: rgb(46, 45, 45);
+      //       font-size: 14px;
+
+      //       padding: 0;
+
+      //       .title {
+      //       }
+      //       .SoLuong {
+      //       }
+      //       .SoTien {
+      //       }
+      //     }
+      //     .content_gheNgoi {
+      //       display: flex;
+      //       color: rgb(46, 45, 45);
+      //       font-size: 14px;
+
+      //       padding: 0;
+
+      //       .title {
+      //       }
+
+      //       .SoGhe {
+      //       }
+      //     }
+      //     .hr {
+      //       margin-top: 20px;
+      //       width: 100%;
+      //       height: 1px;
+      //       background-color: rgb(187, 129, 3);
+      //     }
+      //     .content_tongtienve {
+      //       display: flex;
+      //       color: rgb(194, 106, 5);
+      //       padding: 0;
+      //       margin-top: 15px;
+      //       .title {
+      //         font-size: 20px;
+      //         font-weight: 500;
+      //       }
+      //       .money__total {
+      //       }
+      //     }
+      //   }
+      // }
+
+      .content_tongtienve {
+        color: rgb(137, 194, 5);
+        width: 100%;
+        height: 75px;
+        border-bottom: 1px dotted rgb(85, 84, 84);
+
+        .money__total {
+          color: rgb(120, 170, 4);
+          font-size: 33px;
+          font-weight: 600;
+          line-height: 75px;
+        }
+      }
+
+      .content_ChiTietVe {
+        width: 100%;
+        border-bottom: 1px dotted rgb(85, 84, 84);
+        margin-top: 15px;
+        .name {
+          color: rgb(44, 44, 44);
+          font-weight: 500;
+          font-size: 16px;
+        }
+
+        .name_doitac {
+          color: rgb(44, 44, 44);
+          font-weight: 400;
+          font-size: 13px;
+        }
+        .ChiTietPhim {
+          margin-bottom: 15px;
+          .ChiTiet {
+            color: rgb(44, 44, 44);
+            font-weight: 400;
+            font-size: 13px;
+          }
+        }
+      }
+      .content_ghengoi {
+        width: 100%;
+        height: 60px;
+        border-bottom: 1px dotted rgb(85, 84, 84);
+        // margin-top: 15px;
+        .ghengoi {
+          display: flex;
+          margin-bottom: 15px;
+
+          .title {
+            color: rgb(250, 93, 65);
+            font-size: 16px;
+            font-weight: 500;
+            padding: 0;
+            line-height: 60px;
+          }
+          .gheDat {
+            line-height: 60px;
+            display: flex;
+            // background-color: rgb(156, 115, 115);
+            .itemGhe {
+              color: rgb(250, 93, 65);
+              font-size: 13px;
+              font-weight: 500;
+              padding-right: 2px;
+              max-height: 60px;
+              margin: auto 0;
+            }
+          }
+          .tongTienGhe {
+            color: rgb(13, 71, 1);
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 60px;
+          }
+        }
+      }
+      .content_Combo {
+        display: flex;
+        width: 100%;
+        height: 60px;
+        border-bottom: 1px dotted rgb(85, 84, 84);
+
+        .Combo_Left {
+          display: flex;
+
+          padding: 0;
+          img {
+            width: 15px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            line-height: 60px;
+            margin: auto 0;
+            cursor: pointer;
+            transition: 0.05s;
+            &:hover {
+              width: 18px;
+              height: 24px;
+            }
+            &:active {
+              width: 21px;
+              height: 28px;
+            }
+          }
+          .title {
+            font-size: 13px;
+            font-weight: 400;
+            padding: 0;
+            line-height: 60px;
+            padding-left: 7px;
+          }
+        }
+
+        .combo {
+          height: 100%;
+
+          .item__combo {
+            color: rgb(13, 71, 1);
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 60px;
+          }
+        }
+      }
+
+      .datVe {
+        position: absolute;
+        bottom: 0.5%;
+        left: 0%;
+        padding: 0;
+        width: 100%;
+        height: 60px;
+        transition: 0.1s;
+        cursor: pointer;
+
+        .datVe_btn {
+          background-color: rgb(250, 93, 65);
+          line-height: 60px;
+          // border-bottom: 2px solid rgb(250, 93, 65);
+          .datVe__title {
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            word-spacing: 1px;
+          }
+        }
+
+        &:hover {
+          height: 57px;
+          // border-bottom: 2px solid rgb(250, 93, 65);
+        }
+        &:active {
+          height: 64px;
+          // border-bottom: 2px solid rgb(250, 93, 65);
+        }
+      }
+    }
+  }
+  .anhien {
+    background-image: url("../../../../../assets/images/DTxhkhgVMAAL7QQ.jpg");
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    padding: 0;
+    .blur {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(2, 2, 2, 0.8), rgba(8, 8, 8, 0.8), rgba(48, 47, 43, 0.4));
+      .under {
+        width: 100%;
+        height: 93px;
+      }
+
+      .chonCombo {
+        width: 84%;
+        height: 90px;
+        border-bottom: 1px solid rgb(110, 109, 109);
+        margin: 0 auto;
+        line-height: 83px;
+        .typeticket {
+          padding: 0px;
+          display: flex;
+          position: relative;
+          .img {
+            // position: absolute;
+            width: 50px;
+            height: 50px;
+            line-height: 90px;
+            margin: auto 0;
+            // &:hover {
+            //   width: 62px;
+            //   height: 62px;
+            // }
+            // &:active {
+            //   width: 52px;
+            //   height: 52px;
+            // }
+            // top:0%;
+            // left: 0%;
+          }
+          .title {
+            position: absolute;
+            top: -2%;
+            left: 20%;
+
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+          }
+          .gia {
+            position: absolute;
+            top: 10%;
+            left: 0%;
+            // color: white;
+            font-size: 9px;
+            font-weight: 300;
+            color: rgb(250, 93, 65);
+          }
+          .plus {
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            color: white;
+            font-size: 10px;
+          }
+        }
+
+        .priceticketmobile {
+          text-align: center;
+          font-size: 18px;
+          font-weight: 500;
+          color: white;
+        }
+        .opnum {
+          text-align: right;
+          padding: 0;
+          .count {
+            font-size: 28px;
+            color: rgb(250, 93, 65);
+            cursor: pointer;
+          }
+          .soLuong {
+            border: 1px solid rgb(150, 149, 149);
+            border-radius: 4px;
+            padding: 3px;
+            color: white;
+          }
+        }
+      }
+      // .return {
+      //   width: 84%;
+
+      //   .btn_return{
+      //     i{
+      //       font-size: 30px;
+      //       color: green;
+      //     }
+
+      //   }
+
+      // }
+    }
+  }
+  .login {
+    position: absolute;
+    top: 0%;
+  }
+}

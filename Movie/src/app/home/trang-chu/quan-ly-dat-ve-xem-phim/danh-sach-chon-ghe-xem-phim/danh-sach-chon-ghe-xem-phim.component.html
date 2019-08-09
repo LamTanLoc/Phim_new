@@ -1,0 +1,243 @@
+<div class="ChonGhe">
+  <div class="ChonGhe__LifeCycle">
+    <ul>
+      <li><i class="fa fa-arrow-left display-4"></i></li>
+      <li><a class=" display-4 step active " href="#"><span>01 </span> CHỌN LOẠI VÉ</a></li>
+      <li><a class="display-4 step active" href="#"> <span>02 </span> CHỌN GHẾ & THANH TOÁN</a></li>
+      <li><a class=" display-4 step" href="#"> <span>03 </span> KẾT QUẢ ĐẶT VÉ</a></li>
+    </ul>
+  </div>
+  <div class="content__ChonGhe">
+    <div class="col-md-9 choose__content" *ngIf="trangThaiAnHien">
+
+      <div class="doiTac">
+        <img class="doitac_img" src="../../../../assets/images/bhd.png">
+        <span class="name_doitac ">BHD Star Cineplex - <span class="name_address"> 3/2, 3C Đường 3/2, Q.10
+          </span></span>
+        <br>
+        <div class="ChiTietPhim">
+          <span class="display-4 ChiTiet date ">{{chiTietLichChieu.NgayChieuGioChieu| date: "EEEE"}} - </span>
+          <span class="display-4  ChiTiet doitac_ten "> {{chiTietLichChieu.NgayChieuGioChieu| date: "hh:mm"}} -
+          </span>
+          <span class="display-4 ChiTiet doitac_ten ">{{chiTietLichChieu.Rap.TenRap| uppercase}}</span>
+        </div>
+      </div>
+      <div class="screen">
+        <div class="screen__display">
+         
+          <img src="./../../../../../assets/images/screen.png" alt="">
+
+        </div>
+
+      </div>
+      <div class="row DanhSachcGhe">
+        <div class="col-md-2">
+          <div class="ABC">
+            <div class="display-4 letter">A</div>
+            <div class="display-4 letter">B</div>
+            <div class="display-4 letter">C</div>
+            <div class="display-4 letter">D</div>
+            <div class="display-4 letter">E</div>
+            <div class="display-4 letter">F</div>
+
+          </div>
+        </div>
+
+        <div class="col-md-10">
+          <div class="row gheNgoi">
+            <div class="col-md-12 ">
+              <ng-container *ngFor="let item of DanhSachGheNgoi; let STT = index">
+                <app-item-ghe-ngoi [ghe]="item" (eventGhe)="daChonGhe($event)"></app-item-ghe-ngoi>
+                <br *ngIf="(STT+1)%10 === 0">
+              </ng-container>
+
+            </div>
+
+
+          </div>
+        </div>
+
+
+        <div class="row notes ">
+
+          <div class="gheTrong ">
+            <div class="icon"></div>
+            <p class="display-4 title">Ghế trống</p>
+
+          </div>
+          <div class="gheDangChon mx-5">
+            <div class="icon"></div>
+            <p class="display-4  title">Ghế đang chọn</p>
+
+          </div>
+          <div class="gheKhongTheChon ">
+            <div class="icon"></div>
+            <p class="display-4 title">Ghế không thể chọn</p>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="col-md-9 anhien" *ngIf="!trangThaiAnHien">
+      <div class="blur">
+        <div class="row under"></div>
+        <div class="row chonCombo">
+          <div class="col-sm-5 col-xs-7 typeticket ">
+            <img class="img" src="../../../../../assets/images//icorn_corn_1.jpg" alt="">
+            <p class="title"> Combo 1 </p>
+            <p class="display-4 gia"> 55.000 VND </p>
+            <div class="plus">1 BẮP (NGỌT/MẶN) + 1 NƯỚC (PEPSI/7UP/MIRINDA/MIRINDA)</div>
+
+          </div>
+
+          <div class="col-sm-3 priceticketmobile text-right ">{{giaCombo_1*soLuongCombo_1 | currency:"VND":""}} VND
+          </div>
+          <div class="col-sm-4 col-xs-5 opnum">
+            <span class="  count add" (click)="GiamSoLuongCombo(true)">-</span>
+            <span class="soLuong  px-3  mx-3 ">{{soLuongCombo_1 }}</span>
+            <span class="  count sub" (click)="TangSoLuongCombo(true)">+</span>
+
+          </div>
+
+        </div>
+        <div class="row chonCombo">
+          <div class="col-sm-5 col-xs-7 typeticket ">
+            <img class="img" src="../../../../../assets/images/icon_corn_2.png" alt="">
+            <p class="title"> Combo 2 </p>
+            <p class="display-4 gia"> 60.000 VND </p>
+            <div class="plus">1 BẮP (NGỌT/MẶN) + 2 NƯỚC (PEPSI/7UP/SARSI)</div>
+
+          </div>
+
+          <div class="col-sm-3 priceticketmobile  text-right">{{giaCombo_2*soLuongCombo_2 | currency:"VND":""}} VND
+          </div>
+          <div class="col-sm-4 col-xs-5 opnum">
+            <span class="  count add" (click)="GiamSoLuongCombo(false)">-</span>
+            <span class="soLuong  px-3  mx-3 ">{{soLuongCombo_2 }}</span>
+            <span class="  count sub" (click)="TangSoLuongCombo(false)">+</span>
+
+          </div>
+
+
+        </div>
+        <!-- <div class="row return">
+          <button class="btn btn_return btn-warning"><i class="fa fa-arrow-alt-circle-right"></i>dasdasdas</button>
+        </div> -->
+
+
+      </div>
+
+
+    </div>
+    <div class="col-md-3 result_content">
+      <!-- <div class="img_result">
+
+      </div>
+      <img [src]="phim.HinhAnh" alt="">
+      <div class="blur">
+
+
+        <div class="content">
+          <span> <i class="fa fa-calendar-check"></i></span>
+          <p class=" display-4 date ">{{chiTietLichChieu.NgayChieuGioChieu| date: "EEEE"}}</p>
+          <p class=" display-4  name ">{{phim.TenPhim}}</p>
+
+          <p class=" display-4  hour ">{{chiTietLichChieu.ThoiLuong}} phút -BHD Star
+            ID/{{chiTietLichChieu.MaPhim}} -
+            IDG/{{chiTietLichChieu.MaNhom}}
+          </p>
+        </div>
+
+      </div>
+      <div class="final">
+        <div class=" final__content">
+          <div class="row content_ve">
+            <div class="col-md-5 col-sm-12 title">Số lượng vé</div>
+            <div class="col-md-3  col-sm-12 SoLuong text-center" *ngIf="soLuongVe !== undefined">{{soLuongVe}}</div>
+            <div class="col-md-4  col-sm-12  SoTien text-center" *ngIf="giaVePhim !== undefined">{{giaVePhim}}</div>
+          </div>
+          <div class="row content_combo my-2">
+            <div class=" col-md-5  col-sm-12 title">Số lượng Combo</div>
+            <div class="col-md-3   col-sm-12 SoLuong text-center" *ngIf="soLuongCombo!== undefined">{{soLuongCombo}}
+            </div>
+            <div class="col-md-4  col-sm-12 SoTien text-center" *ngIf="giaCombo !== undefined">{{giaCombo}}</div>
+          </div>
+          <div class="row content_gheNgoi">
+            <div class="col-md-4  col-sm-12 title">Ghế ngồi</div>
+            <div class="col-md-8  col-sm-12  SoGhe text-right">Chưa Chọn</div>
+
+          </div>
+          <div class="hr"></div>
+          <div class="row content_tongtienve" *ngIf="TongTien !== undefined">
+            <div class="col-md-6 display-4 title">TỔNG TIỀN</div>
+            <div class="col-md-6  money__total text-right">
+              {{TongTien | currency:"VND":""}} VND</div>
+
+          </div>
+
+
+
+        </div>
+      </div> -->
+
+      <div class="content_tongtienve" *ngIf="TongTien !== undefined">
+        <div class="money__total  text-center display-4">
+          {{(TongTien+tongTienCombo()) | currency:"VND":""}} VND
+        </div>
+      </div>
+
+      <div class="content_ChiTietVe">
+        <p class=" display-3  name ">{{phim.TenPhim}}</p>
+
+        <span class="name_doitac ">BHD Star Cineplex - <span class="name_address"> 3/2, 3C Đường 3/2, Q.10
+          </span></span><br>
+
+        <div class="ChiTietPhim">
+          <span class="display-4 ChiTiet date ">{{chiTietLichChieu.NgayChieuGioChieu| date: "EEEE"}} - </span>
+          <span class="display-4  ChiTiet doitac_ten ">
+            {{chiTietLichChieu.NgayChieuGioChieu| date: "dd/MM/yyyy - hh:mm "}} -
+          </span>
+          <span class="display-4 ChiTiet doitac_ten ">{{chiTietLichChieu.Rap.TenRap| uppercase}}</span>
+        </div>
+      </div>
+
+      <div class="content_ghengoi">
+        <div class="ghengoi">
+          <div class="col-md-1 col-sm-12 display-4 title text-left">Ghế: </div>
+          <div class="col-md-8 col-sm-12 display-4 gheDat  ">
+            <p class="itemGhe" *ngFor="let item of DanhSachGheDaDat">
+              {{item.TenGhe }},
+            </p>
+          </div>
+          <div class="col-md-3 display-4 text-right tongTienGhe "> {{TongTien | currency:"VND":""}} </div>
+        </div>
+      </div>
+
+      <div class="content_Combo">
+        <div class="col-md-6 col-sm-12 Combo_Left  display-4 ">
+          <img (click)="AnHien()" src="../../../../../assets/images/popcorn.png" alt="">
+          <p class="title  display-4">Chọn Combo</p>
+        </div>
+        <div class="col-md-6 col-sm-12 combo">
+          <p class="item__combo display-4 text-right">{{tongTienCombo() | currency:"VND":""}}</p>
+        </div>
+      </div>
+
+      <!-- ///////////////danh-sach-chon-ghe-xem-phim.component.html -->
+      <div class="col-md-12 datVe ">
+        <div class=" datVe_btn  ">
+          <p class=" datVe__title text-center" (click)="KiemTraDangNhap()">Đặt Vé</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="login">
+      <app-login *ngIf="!HienDN"></app-login>
+  </div>
+  
+</div>

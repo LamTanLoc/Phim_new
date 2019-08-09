@@ -1,0 +1,50 @@
+<div class="container DangNhap" *ngIf="anDN">
+    <div class="blur">
+        <div class="form">
+    
+          <div class="dangNhap">
+            <a class="display-4 title active">Đăng nhập</a>
+    
+          </div>
+          <div class="hr mx-3"></div>
+          <div class="dangky">
+            <a class="display-4 title" (click)="HienThiDangKy()">Đăng ký</a>
+            <!-- routerLink="/form/dang-ky" -->
+    
+          </div>
+    
+    
+        </div>
+    
+        <form #formDangNhap="ngForm" class="formDN">
+         
+    
+          <div class="row TaiKhoan">
+            <div class="col-md-12 ">
+              <div class="input-group">
+                <input type="text" class="form-control"  #TaiKhoan="ngModel" placeholder="Tài khoản"
+                  name="TaiKhoan" ngModel required>
+              </div>
+            </div>
+          </div>
+          <div class="row Password">
+            <div class="col-md-12 ">
+              <div class="form-group ">
+                <div class="input-group">
+                  <input type="password" class="form-control" #MatKhau="ngModel"
+                    placeholder="Mật khẩu" name="MatKhau" ngModel required>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+
+         
+          <div class="row dangnhap">
+            <button class="btn btn_DangNhap form-control" (click)="DangNhap(formDangNhap.value)">Đăng nhập</button>
+          </div>
+          <p  class="display-4 comeBack"  (click)="anDN = false" ><i class="fa fa-repeat" aria-hidden="true"></i> Quay lại</p>
+        </form>
+      </div>
+</div>
+<app-register *ngIf="anHienDK"></app-register>

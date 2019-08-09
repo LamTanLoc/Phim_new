@@ -1,0 +1,209 @@
+<div class="KetQua">
+  <div class="ChonGhe__LifeCycle">
+    <ul>
+      <li><i class="fa fa-arrow-left display-4"></i></li>
+      <li><a class=" display-4 step active " href="#"><span>01 </span> CHỌN LOẠI VÉ</a></li>
+      <li><a class="display-4 step active" href="#"> <span>02 </span> CHỌN GHẾ & THANH TOÁN</a></li>
+      <li><a class=" display-4 step active" href="#"> <span>03 </span> KẾT QUẢ ĐẶT VÉ</a></li>
+    </ul>
+  </div>
+
+  <div class="container content__KetQua">
+    <div class="tag">
+      <p class="thank display-4">Cảm ơn bạn đã đặt vé phim tại Galaxy Cinerma</p>
+      <p class="no display-4"><span class="tag__no">Booking No : </span>
+        <span class="number display-4">05858{{MaLichChieu}}</span></p>
+
+      <img src="../../../../../assets/images/MaVach.gif" alt="" class="maVach mb-2">
+      <p class="name display-4">{{TenPhim}}</p>
+      <div class="hr"></div>
+    </div>
+    <div class="row ThongTinThanhToan">
+      <!-- <div class="hr"></div> -->
+      <!-- <table class=" table table-borderless table__ThanhToan">
+          <thead>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+            
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John</td>
+              <td>Doe</td>
+             
+            </tr>
+            <tr>
+              <td>Mary</td>
+              <td>Moe</td>
+           
+            </tr>
+            <tr>
+              <td>July</td>
+              <td>Dooley</td>
+         
+            </tr>
+          </tbody>
+        </table> -->
+
+      <!-- <div class="col-md-6 px-0">
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <p class="brand ">Ngày phát hành</p>
+                  </td>
+                  <td>
+
+                    <p class="date content contents"> {{phim.NgayKhoiChieu| date: "dd.MM.yyyy"}}</p>
+                  </td>
+
+                </tr>
+                <tr>
+                  <td>
+                    <p class="brand ">Đạo diễn</p>
+                  </td>
+                  <td>
+
+                    <p class="date content contents"> Takahiro Miki</p>
+                  </td>
+
+                </tr>
+                <tr>
+                  <td>
+                    <p class="brand ">Diễn viên</p>
+                  </td>
+                  <td>
+
+                    <p class="date content contents"> </p>
+                  </td>
+
+                </tr>
+
+                <tr>
+                  <td>
+                    <p class="brand">Đánh giá</p>
+                  </td>
+                  <td>
+                    <p class="danhgia content contents">{{phim.DanhGia}}</p>
+                  </td>
+
+                </tr>
+
+                <tr>
+                  <td>
+                    <p class="brand">Thời lượng </p>
+                  </td>
+                  <td>
+                    <p class="hour content contents">{{phim.LichChieu[1].ThoiLuong}} phút - ID/{{phim.MaPhim}} -
+                      IDG/{{phim.MaNhom}}
+                    </p>
+                  </td>
+
+                </tr>
+                <tr>
+                  <td>
+                    <p class="brand">Định dạng</p>
+                  </td>
+                  <td>
+                    <p class="danhgia content contents">2D/Digital</p>
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+          </div> -->
+
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-5 thongTinVe">
+        <table>
+          <tr>
+            <th class="td__title td_titlePd">Thông tin vé</th>
+            <th></th>
+
+          </tr>
+          <tr>
+            <td class="td__title ">Mã vé : </td>
+            <td class="maVe"> #{{MaLichChieu}}</td>
+          </tr>
+
+          <tr>
+            <td class="td__title">Vị trí ghế : </td>
+            <td>
+              <span *ngFor="let item of DanhSachGheDaDat">
+                <span class="ViTriGhe">{{item.TenGhe}} </span>
+
+              </span>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="td__title">Suất chiếu : </td>
+            <td>{{chiTietLichChieu.NgayChieuGioChieu| date: "hh:mm - EEEE-dd/mm/yyyy"}}</td>
+          </tr>
+
+          <tr>
+            <td class="td__title">Phòng chiếu : </td>
+            <td>{{chiTietLichChieu.Rap.TenRap}}</td>
+          </tr>
+
+          <tr>
+            <td class="td__title">Tài khoản : </td>
+            <td>{{TaiKhoan}}</td>
+          </tr>
+
+          <tr>
+            <td class="td__title">Email : </td>
+            <td class="email">{{Email}}@gmail.com</td>
+          </tr>
+        </table>
+
+      </div>
+      <div class="col-md-5 thongTinThanhToan">
+
+        <table>
+          <tr>
+            <th class="td__title td_titlePd">Thông tin thanh toán</th>
+            <th></th>
+
+          </tr>
+          <tr>
+            <td class="td__title">Phương thức : </td>
+            <td>Trực tuyến</td>
+          </tr>
+
+          <tr>
+            <td class="td__title">Tổng tiền : </td>
+            <td>{{TongTien| currency:"VND":""}} VND</td>
+          </tr>
+
+          <tr>
+            <td class="td__title">Thời gian đặt vé : </td>
+            <td>{{date | date: "hh:mm - EEEE-dd/MM/yyyy"}}</td>
+          </tr>
+
+          <tr>
+            <td class="td__title">Phòng chiếu : </td>
+            <td>{{chiTietLichChieu.Rap.TenRap}}</td>
+          </tr>
+
+          <tr>
+            <td class="td__title">Tài khoản : </td>
+            <td>{{TaiKhoan}}</td>
+          </tr>
+
+          <tr>
+            <td class="td__title">Email : </td>
+            <td>{{Email}}@gmail.com</td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
